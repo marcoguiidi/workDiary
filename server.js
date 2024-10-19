@@ -16,7 +16,7 @@ app.use(cors());
 app.use(cookieParser());
 
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb+srv://marcoguiidi:marcoprova@cluster0.lfjcmtr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
