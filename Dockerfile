@@ -14,6 +14,7 @@ COPY . .
 
 # Installa le dipendenze del client e costruisci l'app
 WORKDIR /app/client
+
 RUN npm install && npm run build
 
 # Torna alla cartella principale
