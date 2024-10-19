@@ -1,0 +1,109 @@
+.event-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.event-modal-content {
+    width: 80vw; 
+    height: 85vh; 
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.event-modal-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.event-modal-form-group {
+    margin-bottom: 20px;
+}
+
+.event-modal-form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.event-modal-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.event-modal-save:hover {
+    background-color: #0056b3;
+}
+
+.event-modal-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.event-modal-cancel:hover {
+    background-color: #5a6268;
+}
+
+.event-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .event-modal-content {
+        width: 95vw; 
+        height: auto; 
+        padding: 20px;
+    }
+    .event-modal-form-row {
+        flex-direction: column;
+    }
+}

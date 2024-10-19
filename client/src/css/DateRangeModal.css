@@ -1,0 +1,77 @@
+/* Offuscamento del background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75); /* Opacità per offuscare il contenuto sottostante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Assicura che copra tutto */
+}
+
+/* Stili per la modale */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Assicura che la modale sia sopra l'overlay */
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.modal-content button[type="button"] {
+    background-color: #f5f5f5;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Stili per il risultato */
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.result-container h3 {
+    margin: 0;
+}
+
+.result-container p {
+    margin: 5px 0;
+}

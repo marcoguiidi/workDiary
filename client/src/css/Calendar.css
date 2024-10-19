@@ -1,0 +1,180 @@
+/* Layout generale */
+.page-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f4f8; /* Colore di sfondo più morbido */
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Ombra leggera per effetto "elevato" */
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 10px;
+    }
+}
+
+/* Toolbar */
+.rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* Gradiente elegante */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombra più profonda per dare dimensione */
+    color: white; /* Testo bianco per contrasto */
+}
+
+.rbc-toolbar button {
+    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%); /* Pulsanti con gradiente */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione liscia */
+}
+
+.rbc-toolbar button:hover {
+    background-color: #3b3ec9; /* Hover con colore più scuro */
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+.rbc-toolbar-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Effetto ombra sul testo */
+}
+
+@media (max-width: 768px) {
+    .rbc-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rbc-btn-group {
+        margin-bottom: 10px;
+    }
+
+    .rbc-toolbar-label {
+        font-size: 16px;
+    }
+
+    .rbc-toolbar button {
+        margin-bottom: 8px;
+    }
+}
+
+/* Stile del calendario */
+.rbc-month-view {
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.rbc-month-row {
+    border-bottom: none !important;
+}
+
+.rbc-day-bg {
+    border: none !important;
+    transition: background-color 0.3s ease;
+}
+
+.rbc-day-bg:hover {
+    background-color: #f0f4f8; /* Colore di sfondo al passaggio del mouse */
+}
+
+.rbc-event {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradiente sugli eventi */
+    color: white;
+    border-radius: 12px;
+    padding: 6px 8px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.rbc-event:hover {
+    background-color: #5036d5; /* Hover più scuro sugli eventi */
+    transform: scale(1.05); /* Piccolo zoom al passaggio del mouse */
+}
+
+.rbc-today {
+    background-color: rgba(0, 123, 255, 0.1); /* Sfondo evidenziato per il giorno corrente */
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+}
+
+.rbc-off-range-bg {
+    background-color: #f8f9fa; /* Colore di sfondo per i giorni fuori dal range */
+}
+
+.rbc-agenda-view table tbody tr {
+    border-bottom: none;
+}
+
+.rbc-agenda-view table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Modalità responsive */
+@media (max-width: 768px) {
+    .rbc-event {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .rbc-time-view {
+        font-size: 12px;
+    }
+
+    .rbc-month-row {
+        font-size: 12px;
+    }
+}
+
+/* Slots di tempo */
+.rbc-time-slot {
+    background-color: #f0f4f8;
+    transition: background-color 0.2s ease;
+}
+
+.rbc-time-slot:hover {
+    background-color: #e0e7ff; /* Colore al passaggio del mouse */
+}
+
+/* Tooltip personalizzato (opzionale) */
+.rbc-event:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
