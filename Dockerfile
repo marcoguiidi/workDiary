@@ -23,4 +23,4 @@ WORKDIR /app
 EXPOSE 5000
 
 # Comando per avviare il server
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
