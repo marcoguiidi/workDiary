@@ -44,7 +44,13 @@ const Login = ({ setIsAuthenticated }) => {
       <p>
         Don't have an account? <a href="/register">Register</a>
       </p>
+      <br />
+      <br />
+      <p>
+        Contact the developer: <a href="mailto:mguidi03@gmail.com">mguidi03@gmail.com</a>
+      </p>
     </div>
+    
   );
 };
 
