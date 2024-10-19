@@ -1,5 +1,5 @@
 {
-  "name": "work-diary",
+  "name": "selfie",
   "main": "server.js",
   "version": "0.1.0",
   "dependencies": {
@@ -41,8 +41,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "npm install && node index.js",
-  "build": "cd client && npm install && npm run build" 
+  "start": "node index.js",
+  "build": "npm install && cd client && npm install && npm run build" 
 },
   "eslintConfig": {
     "extends": [
