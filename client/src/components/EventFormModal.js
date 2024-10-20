@@ -52,12 +52,6 @@ const EventFormModal = ({ isOpen, onRequestClose, onSave, event, initialStart })
             <input type="datetime-local" value={end} onChange={(e) => setEnd(e.target.value)} required />
           </div>
         </div>
-        <div className="event-modal-form-row">
-          <div className="event-modal-form-group">
-            <label>Color:</label>
-            <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
-          </div>
-        </div>
         <div className="event-modal-buttons">
           <button type="submit" className="event-modal-save">Save</button>
           <button type="button" className="event-modal-cancel" onClick={onRequestClose}>Cancel</button>
