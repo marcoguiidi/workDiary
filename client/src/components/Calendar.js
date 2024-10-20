@@ -93,7 +93,10 @@ const MyCalendar = () => {
         setDateRangeModalOpen(false);
     };
 
-    const handleCalculateWorkHours = (startDate, endDate, holidays) => {
+    const handleCalculateWorkHours = (startDate, endDate, holidays, pay, maggioration) => {
+        pay = parseFloat(pay);
+        maggioration = parseFloat(maggioration);
+
         const filteredEvents = events.filter(event => {
             return event.start >= startDate && event.end <= endDate && event.title === 'Work';
         });
@@ -112,8 +115,14 @@ const MyCalendar = () => {
                 totalHours += duration;
             }
         });
+
+
+        let weekMoney = totalHours * pay;
+        let supplemento = pay * maggioration/100.0;
+        let payMaggiorated = pay + supplemento;
+        let holidayMoney = sundayHours * payMaggiorated;
     
-        return { totalHours, sundayHours }; 
+        return { totalHours, sundayHours, weekMoney, holidayMoney }; 
     };
 
     const handleSaveEvent = async (event) => {
