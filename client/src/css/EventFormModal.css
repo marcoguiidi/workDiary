@@ -1,6 +1,6 @@
 /* Overlay Styling */
 .event-modal-overlay {
-    background: rgba(0, 0, 0, 0.7); /* Darker backdrop for better contrast */
+    background: rgba(0, 0, 0, 0.8); /* Darker backdrop for better contrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,23 +18,23 @@
     width: 70vw; 
     max-width: 600px;
     height: auto; 
-    background: white;
+    background: linear-gradient(135deg, #f0e7ff, #e6f7ff); /* Soft gradient for a modern look */
     border-radius: 15px; /* Softer corners for a more modern look */
     padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Larger shadow for depth */
     overflow-y: auto;
     box-sizing: border-box;
-    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+    animation: slideIn 0.5s ease-in-out; /* Smooth slide-in animation */
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
@@ -42,10 +42,11 @@
 .event-modal-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 28px; /* Increased font size */
-    color: #333;
-    font-weight: 600; /* Bold and prominent title */
-    letter-spacing: 1px; /* Subtle spacing for readability */
+    font-size: 30px; /* Increased font size */
+    color: #4A2C91; /* Deep purple color */
+    font-weight: bold; /* Bold title */
+    letter-spacing: 1.5px; /* Subtle spacing for readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
 /* Form Styling */
@@ -68,23 +69,23 @@
 label {
     font-weight: 500;
     font-size: 16px;
-    color: #555;
+    color: #333; /* Darker text for readability */
 }
 
 input, textarea, select {
     width: 100%;
     padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded edges */
+    border: 2px solid #4A2C91; /* Dark purple border */
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 input:focus, textarea:focus, select:focus {
-    border-color: #007bff; /* Blue focus for consistency */
+    border-color: #3A7DFF; /* Bright blue focus for emphasis */
     outline: none;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 0 8px rgba(58, 125, 255, 0.3); /* Enhanced focus effect */
 }
 
 textarea {
@@ -95,34 +96,33 @@ textarea {
 button {
     padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:active {
-    transform: scale(0.98);
+    font-weight: bold; /* Bold buttons */
 }
 
 /* Save Button */
 .event-modal-save {
-    background-color: gray; /* Green save button for positive action */
+    background-color: #3A7DFF; /* Bright blue save button */
     color: white;
 }
 
 .event-modal-save:hover {
-    background-color: gray;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Cancel Button */
 .event-modal-cancel {
-    background-color: gray; /* Red cancel button for negative action */
+    background-color: #FF6F61; /* Coral cancel button */
     color: white;
 }
 
 .event-modal-cancel:hover {
-    background-color: gray;
+    background-color: #ff4b30; /* Darker coral on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Button Container */
@@ -135,8 +135,8 @@ button:active {
 /* Media Queries for Responsive Design */
 @media (max-width: 800px) {
     .event-modal-content {
-        width: 90vw; 
-        padding: 20px;
+        max-width: 90vw; 
+        padding: 10px;
     }
     .event-modal-form-row {
         flex-direction: column;

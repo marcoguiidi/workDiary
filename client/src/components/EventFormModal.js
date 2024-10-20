@@ -22,7 +22,6 @@ const EventFormModal = ({ isOpen, onRequestClose, onSave, event, initialStart })
       let endTime = startTime.clone().add(1, 'hour');
       setEnd(endTime.format('YYYY-MM-DDTHH:mm'));
       setColor('#007bff');
-
     }
   }, [event, initialStart]);
 

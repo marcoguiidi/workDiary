@@ -3,15 +3,9 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #f0f4f8; /* Colore di sfondo più morbido */
-    border-radius: 12px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Ombra leggera per effetto "elevato" */
-}
-
-@media (max-width: 768px) {
-    .page-content {
-        padding: 10px;
-    }
+    background-color: #f4f9fc; /* Colore di sfondo più chiaro e fresco */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Ombra più pronunciata */
 }
 
 /* Toolbar */
@@ -20,15 +14,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* Gradiente elegante */
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombra più profonda per dare dimensione */
+    background: linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%); /* Gradiente accattivante */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombra per dare dimensione */
     color: white; /* Testo bianco per contrasto */
 }
 
 .rbc-toolbar button {
-    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%); /* Pulsanti con gradiente */
-    color: white;
+    background: #ffffff; /* Pulsanti bianchi per contrasto */
+    color: #ff5f6d; /* Colore del testo rosa */
     border: none;
     padding: 10px 15px;
     margin: 0 5px;
@@ -38,42 +32,23 @@
 }
 
 .rbc-toolbar button:hover {
-    background-color: #3b3ec9; /* Hover con colore più scuro */
-    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+    background-color: #ff5f6d; /* Colore rosa al passaggio del mouse */
+    color: white; /* Testo bianco al passaggio del mouse */
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
 }
 
 .rbc-toolbar-label {
     font-weight: bold;
-    font-size: 18px;
-    color: #fff;
+    font-size: 24px;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Effetto ombra sul testo */
-}
-
-@media (max-width: 768px) {
-    .rbc-toolbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .rbc-btn-group {
-        margin-bottom: 10px;
-    }
-
-    .rbc-toolbar-label {
-        font-size: 16px;
-    }
-
-    .rbc-toolbar button {
-        margin-bottom: 8px;
-    }
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Effetto ombra sul testo */
 }
 
 /* Stile del calendario */
 .rbc-month-view {
     border-spacing: 0;
-    background-color: #ffffff;
-    border-radius: 12px;
+    background-color: #ffffff; /* Colore di sfondo per il calendario */
+    border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     padding: 15px;
 }
@@ -88,56 +63,50 @@
 }
 
 .rbc-day-bg:hover {
-    background-color: #f0f4f8; /* Colore di sfondo al passaggio del mouse */
+    background-color: rgba(100, 184, 243, 0.3); /* Colore di sfondo al passaggio del mouse */
 }
 
 .rbc-event {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradiente sugli eventi */
+    background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%); /* Gradiente sugli eventi */
     color: white;
     border-radius: 12px;
-    padding: 6px 8px;
+    padding: 10px;
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .rbc-event:hover {
-    background-color: #5036d5; /* Hover più scuro sugli eventi */
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); /* Hover gradiente inverso */
     transform: scale(1.05); /* Piccolo zoom al passaggio del mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombra al passaggio del mouse */
 }
 
 .rbc-today {
-    background-color: rgba(0, 123, 255, 0.1); /* Sfondo evidenziato per il giorno corrente */
-    border-left: 4px solid #007bff;
+    background-color: rgba(255, 233, 0, 0.2); /* Sfondo evidenziato per il giorno corrente */
+    border-left: 4px solid #ffdb3a; /* Colore di evidenziazione */
     border-radius: 8px;
 }
 
 .rbc-off-range-bg {
-    background-color: #f8f9fa; /* Colore di sfondo per i giorni fuori dal range */
-}
-
-.rbc-agenda-view table tbody tr {
-    border-bottom: none;
-}
-
-.rbc-agenda-view table tbody tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f0f4f8; /* Colore di sfondo per i giorni fuori dal range */
 }
 
 /* Modalità responsive */
 @media (max-width: 768px) {
     .rbc-event {
         font-size: 12px;
-        padding: 4px;
-    }
-
-    .rbc-time-view {
-        font-size: 12px;
+        padding: 6px;
     }
 
     .rbc-month-row {
         font-size: 12px;
+    }
+
+    .rbc-toolbar {
+        flex-direction: column; /* Toolbar in colonna su schermi piccoli */
+        align-items: flex-start;
     }
 }
 
@@ -148,14 +117,14 @@
 }
 
 .rbc-time-slot:hover {
-    background-color: #e0e7ff; /* Colore al passaggio del mouse */
+    background-color: rgba(255, 208, 0, 0.3); /* Colore al passaggio del mouse */
 }
 
 /* Tooltip personalizzato (opzionale) */
 .rbc-event:hover::after {
     content: attr(title);
     position: absolute;
-    top: -35px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     padding: 8px;

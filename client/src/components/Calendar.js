@@ -122,6 +122,9 @@ const MyCalendar = () => {
         let payMaggiorated = pay + supplemento;
         let holidayMoney = sundayHours * payMaggiorated;
     
+        weekMoney = Number(weekMoney.toFixed(2));
+        holidayMoney = Number(holidayMoney.toFixed(2));
+
         return { totalHours, sundayHours, weekMoney, holidayMoney }; 
     };
 

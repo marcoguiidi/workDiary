@@ -1,47 +1,122 @@
+/* Contenitore principale della pagina di login */
 .login-container {
     max-width: 400px;
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Animazione slide-in */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .login-container h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animazione fade-in per il testo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .login-container form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .login-container label {
+    font-size: 14px;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 5px;
+    transition: color 0.3s;
 }
 
 .login-container input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    background-color: #fff;
 }
 
 .login-container button {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
     background-color: #007bff;
-    color: #fff;
+    color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Roboto', sans-serif;
 }
 
 .login-container button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.login-container button:active {
+    transform: translateY(0);
+}
+
+.login-container p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-container p a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.login-container p[style="color: red"] {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
 }
 
 .login-container p {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #666;
 }
